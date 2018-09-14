@@ -1,0 +1,1062 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#"
+     xml:base="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Food="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FatContentForObesity -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FatContentForObesity">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#SaltContentForObesity -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#SaltContentForObesity">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">400.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasCookingMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasCookingMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasCookingMethodNutritionComposition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasCookingMethodNutritionComposition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethodNutritionComposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasFoodNutritionComposition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasFoodNutritionComposition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#isAboutCookingMethodNutrient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#isAboutCookingMethodNutrient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethodNutritionComposition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Nutrient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#isAboutFoodNutrient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#isAboutFoodNutrient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Nutrient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#isComposedOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasCookingMethodNutrientContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasCookingMethodNutrientContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethodNutritionComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasCookingMethodUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasCookingMethodUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethodNutritionComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasFoodNutrientContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasFoodNutrientContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasFoodNutrientUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#hasFoodNutrientUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethodNutritionComposition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethodNutritionComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FryMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FryMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethod"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#NotFryMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#NotFryMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#NotFryMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Nutrient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Nutrient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Recipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Recipe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#RecipeGoodForObesity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#RecipeGoodForObesity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1_CerealGrains -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1_CerealGrains">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#10_Eggs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#10_Eggs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1000 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1000">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#10_Eggs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1001 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1001">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#10_Eggs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#101 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#101">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1_CerealGrains"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#102 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#102">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1_CerealGrains"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#103 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#103">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1_CerealGrains"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#11_Fish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#11_Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1100 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1100">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#11_Fish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#12_ShrimpAndCrampAndShell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#12_ShrimpAndCrampAndShell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1201 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1201">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#12_ShrimpAndCrampAndShell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1202 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1202">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#12_ShrimpAndCrampAndShell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1203 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1203">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#12_ShrimpAndCrampAndShell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#13_OtherSeaProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#13_OtherSeaProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1300 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1300">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#13_OtherSeaProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1400 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1400">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1401 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1401">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1402 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1402">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1403 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1403">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1404 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1404">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1405 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1405">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1406 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1406">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#14_SnacksAndDessert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#15_FastFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#15_FastFood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#16_PrepackagingFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#16_PrepackagingFood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#16_SugarDrinks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#16_SugarDrinks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#17_NoSugarDrinks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#17_NoSugarDrinks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1701 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1701">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#17_NoSugarDrinks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1702 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1702">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#17_NoSugarDrinks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1703 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1703">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#17_NoSugarDrinks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#18_Alcohol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#18_Alcohol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1801 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1801">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#18_Alcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1802 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1802">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#18_Alcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1803 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1803">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#18_Alcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1804 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1804">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#18_Alcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1805 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1805">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#18_Alcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#19_Oil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#19_Oil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1901 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1901">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#19_Oil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1902 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#1902">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#19_Oil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#2_BeansAndProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#2_BeansAndProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#201 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#201">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#2_BeansAndProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#202 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#202">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#2_BeansAndProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#203 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#203">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#2_BeansAndProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#204 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#204">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#2_BeansAndProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#21_Seasoning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#21_Seasoning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#2100 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#2100">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#21_Seasoning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#3_Vegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#3_Vegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#301 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#301">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#3_Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#302 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#302">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#3_Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#303 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#303">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#3_Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#304 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#304">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#3_Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#305 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#305">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#3_Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#306 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#306">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#3_Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#4_MushroomAndAlgaefood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#4_MushroomAndAlgaefood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#401 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#401">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#4_MushroomAndAlgaefood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#402 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#402">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#4_MushroomAndAlgaefood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#5_Fruits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#5_Fruits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#501 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#501">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#5_Fruits"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#502 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#502">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#5_Fruits"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#503 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#503">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#5_Fruits"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#504 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#504">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#5_Fruits"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#505 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#505">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#5_Fruits"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#506 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#506">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#5_Fruits"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#6_Nuts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#6_Nuts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#600 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#600">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#6_Nuts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#601 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#601">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#6_Nuts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#602 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#602">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#6_Nuts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#7_LiveStock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#7_LiveStock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#701 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#701">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#7_LiveStock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#702 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#702">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#7_LiveStock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#703 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#703">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#7_LiveStock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#8_Poultry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#8_Poultry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#801 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#801">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#8_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#802 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#802">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#8_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#803 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#803">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#8_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#804 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#804">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#8_Poultry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#9_Dairy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#9_Dairy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#901 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#901">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#9_Dairy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#902 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#902">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#9_Dairy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#903 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#903">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#9_Dairy"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Boil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Boil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#NotFryMethod"/>
+        <hasCookingMethodNutritionComposition rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#BoilCookingMethodCompositionSalt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#BoilChickenBreast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#BoilChickenBreast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Recipe"/>
+        <hasCookingMethod rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Boil"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreast"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#BoilCookingMethodCompositionSalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#BoilCookingMethodCompositionSalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethodNutritionComposition"/>
+        <isAboutCookingMethodNutrient rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Salt"/>
+        <hasCookingMethodNutrientContent rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</hasCookingMethodNutrientContent>
+        <hasCookingMethodUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/100g</hasCookingMethodUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#801"/>
+        <hasFoodNutritionComposition rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionFat"/>
+        <hasFoodNutritionComposition rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionProtein"/>
+        <hasFoodNutritionComposition rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionSalt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionFat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionFat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+        <isAboutFoodNutrient rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Fat"/>
+        <hasFoodNutrientContent rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.6</hasFoodNutrientContent>
+        <hasFoodNutrientUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g/100g</hasFoodNutrientUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionProtein -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionProtein">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+        <isAboutFoodNutrient rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Protein"/>
+        <hasFoodNutrientContent rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19.4</hasFoodNutrientContent>
+        <hasFoodNutrientUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g/100g</hasFoodNutrientUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionSalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#ChickenBreastNutrientCompositionSalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+        <isAboutFoodNutrient rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Salt"/>
+        <hasFoodNutrientContent rdf:datatype="http://www.w3.org/2001/XMLSchema#double">34.4</hasFoodNutrientContent>
+        <hasFoodNutrientUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/100g</hasFoodNutrientUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Fat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Fat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Nutrient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Fry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Fry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FryMethod"/>
+        <hasCookingMethodNutritionComposition rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FryCookingMethodCompositionSalt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FryCookingMethodCompositionSalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FryCookingMethodCompositionSalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#CookingMethodNutritionComposition"/>
+        <isAboutCookingMethodNutrient rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Salt"/>
+        <hasCookingMethodNutrientContent rdf:datatype="http://www.w3.org/2001/XMLSchema#double">400.0</hasCookingMethodNutrientContent>
+        <hasCookingMethodUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/100g</hasCookingMethodUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FryPorkChop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FryPorkChop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Recipe"/>
+        <hasCookingMethod rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Fry"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#701"/>
+        <hasFoodNutritionComposition rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChopNutrientCompositionFat"/>
+        <hasFoodNutritionComposition rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChopNutrientCompositionSalt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChopNutrientCompositionFat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChopNutrientCompositionFat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+        <isAboutFoodNutrient rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Fat"/>
+        <hasFoodNutrientContent rdf:datatype="http://www.w3.org/2001/XMLSchema#double">30.6</hasFoodNutrientContent>
+        <hasFoodNutrientUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g/100g</hasFoodNutrientUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChopNutrientCompositionSalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#PorkChopNutrientCompositionSalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#FoodNutritionComposition"/>
+        <isAboutFoodNutrient rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Salt"/>
+        <hasFoodNutrientContent rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.0</hasFoodNutrientContent>
+        <hasFoodNutrientUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/100g</hasFoodNutrientUnit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Protein -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Protein">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Nutrient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Salt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Salt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shaoj/ontologies/2018/8/Food#Nutrient"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
